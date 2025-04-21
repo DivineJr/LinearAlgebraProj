@@ -23,7 +23,7 @@ public final class App {
      */
     public static void main(String[] args) {
         // File testFile = new File("src/main/resources/currents.m");
-        File realFile = 
+        File realFile = new File("src/main/resources/UTF-8currents9V.m");
 
         // System.out.println("testFile: " + testFile.exists()); //For debug purposes
 
