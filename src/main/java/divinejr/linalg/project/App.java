@@ -33,7 +33,8 @@ public final class App {
         // SimpleMatrix testMatrix = new SimpleMatrix(new double[][] {{1.0, 4.0, 9.0, 9.0}, {6.0, 2.0, 5.0, 7.0}, {8.0, 7.0, 3.0, 5.0}});
         SimpleMatrix rrefMatrix = doRREF(theMatrix);
         printMatrix(rrefMatrix);
-        interpretMatrix(rrefMatrix);
+        // interpretMatrixAbs(rrefMatrix); //With absolute values on the final currents
+        interpretMatrix(rrefMatrix); //With not so absolute vales on the final currents
     }
 
     public static SimpleMatrix doRREF(SimpleMatrix input) {
@@ -57,9 +58,15 @@ public final class App {
 
     }
 
-    public static void interpretMatrix(SimpleMatrix input) {
+    public static void interpretMatrixAbs(SimpleMatrix input) {
         for(int i = 0; i < input.getNumRows(); i++) {
             System.out.println("I" + (i + 1) + ": " + Math.abs(input.get(i, input.getNumCols() - 1)));
+        }
+    }
+
+    public static void interpretMatrix(SimpleMatrix input) {
+        for(int i = 0; i < input.getNumRows(); i++) {
+            System.out.println("I" + (i + 1) + ": " + input.get(i, input.getNumCols() - 1));
         }
     }
 
