@@ -22,8 +22,8 @@ public final class App {
      * @param args The arguments of the program.
      */
     public static void main(String[] args) {
-        // File testFile = new File("src/main/resources/currents.m");
-        File realFile = new File("src/main/resources/UTF-8currents9V.m");
+        // File testFile = new File("src/main/resources/currents.m"); //Original given file
+        File realFile = new File("src/main/resources/UTF-8currents9V.m"); //New file we made for 9v
 
         // System.out.println("testFile: " + testFile.exists()); //For debug purposes
 
@@ -34,7 +34,7 @@ public final class App {
         SimpleMatrix rrefMatrix = doRREF(theMatrix);
         printMatrix(rrefMatrix);
         // interpretMatrixAbs(rrefMatrix); //With absolute values on the final currents
-        interpretMatrix(rrefMatrix); //With not so absolute vales on the final currents
+        interpretMatrix(rrefMatrix); //With not so absolute values on the final currents
     }
 
     public static SimpleMatrix doRREF(SimpleMatrix input) {
